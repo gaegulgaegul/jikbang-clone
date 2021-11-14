@@ -326,3 +326,73 @@ body {
 .apply-store {
     background-image: url(https://s.zigbang.com/legacy/images/v2/main/download_iOS.png);
 }
+
+.bg-font-gray {
+    background-color: #f6f6f6;
+    color: #666666;
+}
+
+.board-page {
+    width: 66%;
+    min-height: 600px;
+    border: 1px solid #d9d3c8;
+    border-radius: 3px;
+    background-color: white;
+    margin: 23px auto 50px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px;
+}
+
+.board-page h2 {
+    display: block;
+    width: 100%;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-bottom: 2px solid black;
+    padding: 30px 0 15px;
+}
+
+.board-page ul {
+    width: 100%;
+}
+
+.board-page ul li {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 5px;
+    border-bottom: 1px dotted #999999;
+}
+
+.board-page-subject {
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.board-page-date {
+    font-size: 0.8rem;
+}
+
+.roadmap-search-area {
+    background-color: white;
+    position: fixed;
+    top: 100px;
+    left: 20px;
+    display: flex;
+    z-index: 100;
+    padding: 10px;
+    border: 1px solid#999999;
+    border-radius: 3px;
+}
+
+.roadmap-search-area input[type='text'] {
+    width: 350px;
+    height: 30px;
+    border: 1px solid rgb(250, 136, 11);
+    border-radius: 3px 0 0 3px;
+}
+
+.roadmap-search-button-area {
+    background-color: rgb(250, 136, 11);
+    border-radius: 0 3px 3px 0;
+}
