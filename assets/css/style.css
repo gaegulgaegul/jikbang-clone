@@ -85,6 +85,7 @@ body {
     border: 0px;
     border-radius: 3px;
     margin-right: 20px;
+    cursor: pointer;
 }
 
 .move-marketing-area {
@@ -95,6 +96,7 @@ body {
     font-weight: bold;
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
 .move-marketing-area:hover {
@@ -159,6 +161,7 @@ body {
     background-color: rgba(0, 0, 0, 0.65);
     color: white;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .search-category li {
@@ -212,6 +215,7 @@ body {
     align-items: center;
     border-radius: 0 10px 10px 0;
     padding: 5px 18px;
+    cursor: pointer;
 }
 
 .board-area {
@@ -254,6 +258,7 @@ body {
     background-color: #fafafa;
     border-radius: 3px;
     padding: 6px 12px;
+    cursor: pointer;
 }
 
 .introduce {
@@ -395,4 +400,5 @@ body {
 .roadmap-search-button-area {
     background-color: rgb(250, 136, 11);
     border-radius: 0 3px 3px 0;
+    cursor: pointer;
 }
