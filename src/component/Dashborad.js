@@ -1,3 +1,8 @@
+/**
+ * Dashboard Component
+ * @returns {string}
+ * @constructor
+ */
 const Dashboard = () => {
     return `
         <div class="container">

@@ -4,16 +4,20 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 module.exports = {
+    // 빌드 모드 설정
     mode: 'development',
+    // 빌드 대상 파일
     entry: {
         index: "./src/main.js"
     },
+    // 빌드 후 생성 파일 정보
     output: {
         filename: "[name].bundle.js",
         path: path.resolve(__dirname, "build"),
         publicPath: "/",
         clean: true,
     },
+    // 모듈 설정 정보
     module: {
         rules: [
             {
@@ -22,7 +26,9 @@ module.exports = {
             },
         ],
     },
+    // 플러그인 설정 정보
     plugins: [
+        // build 폴더 안의 파일 삭제 설정
         new CleanWebpackPlugin({
             dry: true,
             verbose: true,
@@ -32,6 +38,7 @@ module.exports = {
                 path.resolve(process.cwd(), 'build/**/*')
             ]
         }),
+        // 빌드 후 스크립트 정보를 추가할 대상 html
         new HtmlWebpackPlugin({
             template: "index.html",
             filename: "index.html",
@@ -40,6 +47,7 @@ module.exports = {
         })
 
     ],
+    // 개발 서버 설정 정보 추가
     devServer: {
         static: {
             directory: path.join(__dirname, 'build')

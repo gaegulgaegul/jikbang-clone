@@ -1,3 +1,8 @@
+/**
+ * Header Component
+ * @returns {string}
+ * @constructor
+ */
 const Header = () => {
     return `
         <div class="fixed">
