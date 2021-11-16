@@ -43,26 +43,14 @@ const Dashboard = () => {
                         <h2>뉴스</h2>
                         <button class="news-more-btn">더보기</button>
                     </div>
-                    <ul class="grid news-grid">
-                        <li>브랜드 가전을 고르는 이유</li>
-                        <li>브랜드 가전을 고르는 이유</li>
-                        <li>브랜드 가전을 고르는 이유</li>
-                        <li>브랜드 가전을 고르는 이유</li>
-                        <li>브랜드 가전을 고르는 이유</li>
-                    </ul>
+                    <ul class="grid news-grid"></ul>
                 </div>
                 <div class="board-item">
                     <div class="board-title">
                         <h2>공지사항</h2>
                         <button class="notice-more-btn">더보기</button>
                     </div>
-                    <ul class="grid notice-grid">
-                        <li>[공지] 직방 개인정보처리방침(2021/02/11) 개정 안내</li>
-                        <li>[공지] 직방 개인정보처리방침(2021/02/11) 개정 안내</li>
-                        <li>[공지] 직방 개인정보처리방침(2021/02/11) 개정 안내</li>
-                        <li>[공지] 직방 개인정보처리방침(2021/02/11) 개정 안내</li>
-                        <li>[공지] 직방 개인정보처리방침(2021/02/11) 개정 안내</li>
-                    </ul>
+                    <ul class="grid notice-grid"></ul>
                 </div>
             </div>
         </section>
