@@ -3,6 +3,10 @@ import Board from "../component/Board.js";
 import {render} from "../util/Utils.js";
 import {moveMainPage, moveMapPage} from "./useHeader.js";
 
+/**
+ * 게시판 Component 관리 hooks
+ * @returns {{getBoardsTop5: (function(*=): Promise<*[]>), renderBoard: renderBoard, getBoards: (function(*=): Promise<*[]>)}}
+ */
 const useBoard = () => {
 
     /**

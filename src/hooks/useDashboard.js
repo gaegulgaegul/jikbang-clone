@@ -3,23 +3,23 @@ import {appendHtml} from "../util/Utils.js";
 
 /**
  * Dashboard Component 관리 hooks
- * @returns {{appendBoard: ((function(): Promise<void>)|*), bindBoardButton: bindBoardButton}}
+ * @returns {{handleClickCategory: handleClickCategory, handleClickBoard: handleClickBoard, appendBoard: (function(): Promise<void>)}}
  */
 const useDashboard = () => {
 
     /**
      * 게시판 이동 버튼 이벤트 추가
      */
-    const bindBoardButton = () => {
+    const handleClickBoard = () => {
         document.querySelector('.news-more-btn')
-            .addEventListener('click', async (event) => {
+            .addEventListener('click', async () => {
                 const newsItems = await getBoards('news');
                 if (newsItems.length === 0) return;
 
                 renderBoard('뉴스', newsItems);
             });
         document.querySelector('.notice-more-btn')
-            .addEventListener('click', async (event) => {
+            .addEventListener('click', async () => {
                 const noticeItems = await getBoards('notice');
                 if (noticeItems.length === 0) return;
 
@@ -51,10 +51,26 @@ const useDashboard = () => {
         appendHtml(noticeGrid, noticeTags);
     }
 
+    /**
+     * 검색 카테고리 선택 이벤트 설정
+     */
+    const handleClickCategory = () => {
+        document.querySelector(".search-category")
+            .addEventListener("click", ({ target: { id } }) => {
+                // 검색 카테고리 하위 listItem active 클래스 삭제
+                document.querySelectorAll(".search-category li")
+                    .forEach(element => element.classList.remove('active'));
+                // 선택한 listItem에 active 클래스 입력
+                document.querySelector(".search-category #" + id)
+                    .classList.add("active");
+            });
+    };
+
     return {
-        bindBoardButton,
-        appendBoard
+        handleClickBoard,
+        appendBoard,
+        handleClickCategory
     };
 };
 
-export const { bindBoardButton, appendBoard } = useDashboard();
+export const { handleClickBoard, appendBoard, handleClickCategory } = useDashboard();

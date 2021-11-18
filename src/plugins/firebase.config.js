@@ -1,5 +1,5 @@
-import { initializeApp } from "firebase/app"
-import { getFirestore, collection, getDocs, query, orderBy, limit } from "firebase/firestore"
+import {initializeApp} from "firebase/app";
+import {collection, getDocs, getFirestore, limit, orderBy, query} from "firebase/firestore";
 
 // firebase 기본 설정 정보
 const firebaseConfig = {

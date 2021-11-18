@@ -1,5 +1,10 @@
 import Header from "./Header.js";
 
+/**
+ * 지도 영역 관리 Component
+ * @returns {string}
+ * @constructor
+ */
 const RoadMap = () => {
     return `
         ${Header()}

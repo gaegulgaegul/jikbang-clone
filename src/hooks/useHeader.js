@@ -2,19 +2,18 @@ import {render} from "../util/Utils.js";
 import {renderMap} from "./useRoadMap.js";
 import RoadMap from "../component/RoadMap.js";
 import App from "../component/App";
-import {bindBoardButton} from "./useDashboard";
+import {handleClickBoard} from "./useDashboard.js";
 
 /**
  * Header Component 관리 Hooks
- * @returns {{moveMapPage: moveMapPage}}
+ * @returns {{moveMainPage: moveMainPage, moveMapPage: moveMapPage}}
  */
 const useHeader = () => {
 
     /**
      * Header item 클릭 시 roadmap Component 랜더링 이벤트 설정
-     * @param event
      */
-    const moveMapPage = (event) => {
+    const moveMapPage = () => {
         document.querySelectorAll('.category-container li')
             .forEach(element => element.addEventListener('click', ({ target }) => {
                 if (!target) return;
@@ -23,7 +22,7 @@ const useHeader = () => {
                 if (!item) return;
                 const id = item.id;
                 render(RoadMap, document.querySelector('#app'));
-                renderMap();
+                renderMap(id);
             }))
 
     };
@@ -39,7 +38,7 @@ const useHeader = () => {
                 // Header item 클릭 시 RoadMap Component 랜더링 이벤트 설정
                 moveMapPage();
                 // 게시판 이동 버튼 이벤트 설정
-                bindBoardButton();
+                handleClickBoard();
             });
     };
 
